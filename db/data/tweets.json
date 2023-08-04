@@ -1,0 +1,90 @@
+[
+  {
+    "body": "Just published a new blog post about Ruby on Rails!",
+    "comments": [
+      "This is a great tweet!",
+      "Love the content, keep it coming!",
+      "Awesome content! Thanks for sharing!",
+      "You have a way with words. Amazing!"
+    ]
+  },
+  {
+    "body": "Feeling grateful for all the support on my coding journey. #100DaysOfCode",
+    "comments": [
+      "Wow, this tweet is so inspiring!",
+      "I couldn't agree more!",
+      "This tweet made my day!",
+      "I'm sharing this with all my friends!"
+    ]
+  },
+  {
+    "body": "Excited to announce the launch of our new web app! 🚀",
+    "comments": [
+      "Awesome content! Thanks for sharing!",
+      "You have a way with words. Amazing!"
+    ]
+  },
+  {
+    "body": "Just completed a challenging coding project. #programming",
+    "comments": [
+      "I'm sharing this with all my friends!",
+      "This tweet deserves more likes!",
+      "Absolutely brilliant tweet!",
+      "I wish I had tweeted this!"
+    ]
+  },
+  {
+    "body": "Check out this awesome tutorial on web development! #coding",
+    "comments": [
+      "I wish I had tweeted this!",
+      "This is going viral for sure!",
+      "Absolutely brilliant tweet!",
+      "Love the content, keep it coming!"
+    ]
+  },
+  {
+    "body": "Remember to always be kind to one another. #SpreadLove",
+    "comments": [
+      "Such a powerful message in this tweet.",
+      "This tweet speaks to my soul.",
+      "I'm bookmarking this tweet for later!",
+      "I couldn't agree more!"
+    ]
+  },
+  {
+    "body": "Sharing some coding tips for beginners. #learntocode",
+    "comments": [
+      "Just published a new blog post about Ruby on Rails!",
+      "This tweet made my day!",
+      "Love the content, keep it coming!",
+      "Wow, this tweet is so inspiring!"
+    ]
+  },
+  {
+    "body": "The journey to becoming a developer has been incredible. #devlife",
+    "comments": [
+      "I'm sharing this with all my friends!",
+      "This tweet deserves more likes!",
+      "I couldn't agree more!",
+      "Such a powerful message in this tweet."
+    ]
+  },
+  {
+    "body": "Happy to be a part of this amazing coding community. #CodeNewbie",
+    "comments": [
+      "This tweet deserves more likes!",
+      "I'm sharing this with all my friends!",
+      "This is going viral for sure!",
+      "Wow, this tweet is so inspiring!"
+    ]
+  },
+  {
+    "body": "Check out my latest code snippet. #coding",
+    "comments": [
+      "This tweet speaks to my soul.",
+      "I'm bookmarking this tweet for later!",
+      "Love the content, keep it coming!",
+      "I wish I had tweeted this!"
+    ]
+  }
+]
