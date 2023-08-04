@@ -13,3 +13,10 @@ rails generate migration AddDefaultInSeveralColumns
 rails generate migration AddIndexToSeveralColumns 
 ## Declarar que no deben ser vacías
 rails generate migration ChangeNullTrueToFalseInSeveralColumns
+
+
+# Controladores
+
+rails generate controller Users index show edit new update destroy
+rails generate controller Tweets index show edit new update destroy
+# rails generate controller Likes index show edit new update destroy

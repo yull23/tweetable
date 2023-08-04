@@ -96,3 +96,5 @@ end
 end
 p Like.count, User.count, Tweet.count
 ```
+
+## Generación de controladores

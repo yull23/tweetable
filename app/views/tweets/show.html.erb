@@ -1,0 +1,10 @@
+<h2>Tweet Detail</h2>
+<%= render partial: "shared/tweet_block", locals: {tweet: @tweet} %>
+<div>
+  <h3>Retweets</h3>
+</div>
+<div>
+  <% @tweet.replies.each do |answer| %>
+    <%= render partial: "shared/tweet_block", locals: {tweet: answer} %>
+  <% end %>
+</div>
