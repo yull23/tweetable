@@ -58,38 +58,41 @@
    has_many :likes, dependent: :destroy
    ```
 
-## Creación de datos
+## Data creation
 
 An initial model was proposed for the creation of data, these must be verified so that, as a result of these, the validations are carried out:
 
 ```
-# # Seeding data, without validations
+# Seeding data, without validations
 
-# Like.destroy_all
-# Tweet.destroy_all
-# User.destroy_all
+Like.destroy_all
+Tweet.destroy_all
+User.destroy_all
 
-# # Creating users
-# 5.times do
-#   User.create
-# end
-# users=User.all[0..4]
+# Creating users
 
-# ## Main tweets creation
-# 5.times do
-#   tweet=Tweet.create(user:users.sample)
-# end
-# main_tweets=Tweet.all[0..4]
+5.times do
+  User.create
+end
+users=User.all[0..4]
 
-# ## Secundary tweets creation
-# 10.times do
-#   tweet=Tweet.create(user:users.sample, replied_to:main_tweets.sample)
-# end
+## Main tweets creation
 
-# ## Creación de likes para tweets
-# 50.times do
-#   like=Like.create(user:users.sample, tweet:Tweet.all.sample)
-# end
+5.times do
+  tweet=Tweet.create(user:users.sample)
+end
+main_tweets=Tweet.all[0..4]
 
-# p Like.count, User.count, Tweet.count
+## Secundary tweets creation
+
+10.times do
+  tweet=Tweet.create(user:users.sample, replied_to:main_tweets.sample)
+end
+
+## Creación de likes para tweets
+
+50.times do
+  like=Like.create(user:users.sample, tweet:Tweet.all.sample)
+end
+p Like.count, User.count, Tweet.count
 ```

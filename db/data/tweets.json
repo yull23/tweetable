@@ -1,7 +1,7 @@
 [
   {
     "body": "Just published a new blog post about Ruby on Rails!",
-    "comments": [
+    "replies": [
       "This is a great tweet!",
       "Love the content, keep it coming!",
       "Awesome content! Thanks for sharing!",
@@ -10,7 +10,7 @@
   },
   {
     "body": "Feeling grateful for all the support on my coding journey. #100DaysOfCode",
-    "comments": [
+    "replies": [
       "Wow, this tweet is so inspiring!",
       "I couldn't agree more!",
       "This tweet made my day!",
@@ -19,14 +19,14 @@
   },
   {
     "body": "Excited to announce the launch of our new web app! 🚀",
-    "comments": [
+    "replies": [
       "Awesome content! Thanks for sharing!",
       "You have a way with words. Amazing!"
     ]
   },
   {
     "body": "Just completed a challenging coding project. #programming",
-    "comments": [
+    "replies": [
       "I'm sharing this with all my friends!",
       "This tweet deserves more likes!",
       "Absolutely brilliant tweet!",
@@ -35,7 +35,7 @@
   },
   {
     "body": "Check out this awesome tutorial on web development! #coding",
-    "comments": [
+    "replies": [
       "I wish I had tweeted this!",
       "This is going viral for sure!",
       "Absolutely brilliant tweet!",
@@ -44,7 +44,7 @@
   },
   {
     "body": "Remember to always be kind to one another. #SpreadLove",
-    "comments": [
+    "replies": [
       "Such a powerful message in this tweet.",
       "This tweet speaks to my soul.",
       "I'm bookmarking this tweet for later!",
@@ -53,7 +53,7 @@
   },
   {
     "body": "Sharing some coding tips for beginners. #learntocode",
-    "comments": [
+    "replies": [
       "Just published a new blog post about Ruby on Rails!",
       "This tweet made my day!",
       "Love the content, keep it coming!",
@@ -62,7 +62,7 @@
   },
   {
     "body": "The journey to becoming a developer has been incredible. #devlife",
-    "comments": [
+    "replies": [
       "I'm sharing this with all my friends!",
       "This tweet deserves more likes!",
       "I couldn't agree more!",
@@ -71,7 +71,7 @@
   },
   {
     "body": "Happy to be a part of this amazing coding community. #CodeNewbie",
-    "comments": [
+    "replies": [
       "This tweet deserves more likes!",
       "I'm sharing this with all my friends!",
       "This is going viral for sure!",
@@ -80,7 +80,7 @@
   },
   {
     "body": "Check out my latest code snippet. #coding",
-    "comments": [
+    "replies": [
       "This tweet speaks to my soul.",
       "I'm bookmarking this tweet for later!",
       "Love the content, keep it coming!",

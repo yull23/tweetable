@@ -12,7 +12,8 @@ class User < ApplicationRecord
   validates :password, presence: true, length: { minimum: 6 }, format: { without: /\s/ }
   validates :username, presence: true, uniqueness: true,
                        length: { minimum: 3, maximum: 16 },
-                       format: { without: /\s/, with: /\A[a-zA-Z0-9_\-\.]+\z/ }
+                       format: { without: /\s/ }
+
   validates :name, presence: true
 
   # Personalized Validations

@@ -28,6 +28,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_03_182234) do
     t.integer "replies_count", default: 0
     t.integer "likes_count", default: 0
     t.integer "category", default: 0
+    t.date "upload_date"
+    t.date "update_tweet"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"

@@ -9,12 +9,28 @@ class Tweet < ApplicationRecord
                      inverse_of: "replied_to"
   belongs_to :replied_to, class_name: "Tweet", optional: true, counter_cache: :replies_count
 
-  ##
+  # Validations
+  validates :body, presence: true, length: { maximum: 140 }
+  validate :tweet_replied_to
+
+  # Query interface
+  enum :category, {
+    post: 0,
+    answer: 1
+  }
   # Callbacks
   before_validation :set_upload_date, on: :create
   after_save :set_update_tweet
 
   private
+
+  def tweet_replied_to
+    if category == "answer" && Tweet.find_by(id: replied_to_id).nil?
+      errors.add(:replied_to_id, "should be a valid post tweet")
+    elsif category == "post" && replied_to_id
+      errors.add(:replied_to_id, "should be nil")
+    end
+  end
 
   def set_upload_date
     self.upload_date ||= Date.current if new_record? || upload_date.blank?
