@@ -1,9 +1,11 @@
 <div>
-  <p><strong>User:</strong><%= tweet.user.name %></p>
-  <p><strong>Username:</strong><%= tweet.user.username %></p>
-  <p><strong>Body:</strong><%= tweet.body %></p>
-  <p><strong>Upload:</strong><%= tweet.upload_date %></p>
-  <p><strong>Update:</strong><%= tweet.update_tweet %></p>
-  <p><strong>Likes:</strong><%= tweet.likes_count %></p>
-  <p><strong>Tweets:</strong><%= tweet.replies_count %></p>
-</div>
+  <%#= link_to tweet_path(tweet) do%>
+    <p><strong>User:</strong><%= tweet.user.name %></p>
+    <p><strong>Username:</strong>@<%= tweet.user.username %></p>
+    <p><strong>Body:</strong><%= tweet.body %></p>
+    <p><strong>Upload:</strong><%= tweet.upload_date %></p>
+    <p><strong>Update:</strong><%= tweet.update_tweet %></p>
+    <p><strong>Likes:</strong><%= tweet.likes_count %></p>
+    <p><strong>Tweets:</strong><%= tweet.replies_count %></p>
+    <%# end %>
+  </div>

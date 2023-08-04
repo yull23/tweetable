@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   # Associations between models
   has_many :likes, dependent: :destroy
-  has_many :tweets, through: :likes, dependent: :destroy
+  has_many :tweets, dependent: :destroy
   # Query Interface
   enum :role, {
     member: 0,

@@ -1,0 +1,11 @@
+<h2>Profile</h2>
+<%= render partial: "profile", locals: {user: @user} %>
+<div>
+  <h3>Likes</h3>
+  <p>(<%= @user.likes_count%>)</p>
+</div>
+<div>
+  <% @user.likes.each do |answer| %>
+    <%= render partial: "shared/tweet_block", locals: {tweet: answer.tweet} %>
+  <% end %>
+</div>
