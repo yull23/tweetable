@@ -1,0 +1,64 @@
+.profile-block {
+  display: grid;
+  grid-template-rows: repeat(5, auto);
+  margin: 10px auto;
+  padding: 20px;
+
+  width: 80%;
+  max-width: 800px;
+}
+
+.activity_user {
+  display: flex;
+  justify-content: space-around;
+}
+
+.activity_user-link {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  margin: 5px auto;
+  text-decoration: none;
+  color: inherit;
+  line-height: 2;
+}
+
+/* Avatar */
+.profile-block__avatar-image {
+  /* Estilos para el contenedor del avatar */
+  width: 150px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 5px auto;
+}
+
+/* Factorizar estos elementos */
+.content_tipic {
+  display: flex;
+  justify-content: center;
+  color: #ab9c9c;
+  margin: 5px auto;
+  padding: 5px auto;
+}
+
+.text_n {
+  font-weight: bold;
+  color: black;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.activity_user-link-active {
+  font-weight: bold;
+  color: black;
+  border-radius: 1px;
+  border-bottom: 4px solid rgb(166, 98, 110);
+}
+
+.activity_user-link-deactivated {
+  color: #ab9c9c;
+}

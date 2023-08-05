@@ -1,5 +1,23 @@
-<div>
-  <p><strong>Name:</strong><%= user.name %></p>
-  <p><strong>Username:</strong>@<%= user.username %></p>
-  <p><strong>Joined:</strong><%= user.upload_date %></p>
+<div class="profile-block">
+  <%= image_tag(user.avatar, alt: "avatar_user_profile", class: "profile-block__avatar-image") %>
+  <span class="content_tipic text_n"><%= user.name %></span>
+  <span class="content_tipic">@<%= user.username %></span>
+  <p class="content_tipic">Joined on <%= user.upload_date.strftime('%B %e, %Y')
+ %>
+  </p>
+  <% if  current_page?(user_path)%>
+    <% name_class_like="activity_user-link activity_user-link-deactivated" %>
+    <% name_class_tweet="activity_user-link activity_user-link-active" %>
+  <% elsif  current_page?(show_user_likes_path(user)) %>
+    <% name_class_like="activity_user-link activity_user-link-active" %>
+    <% name_class_tweet="activity_user-link activity_user-link-deactivated" %>
+  <% end %>
+  <div class="activity_user">
+    <%= link_to user_path, class: name_class_tweet do%>
+      Tweets (<%= @user.tweets_count%>)
+    <% end %>
+    <%= link_to show_user_likes_path(user), class: name_class_like do%>
+      Likes (<%= @user.likes_count%>)
+    <% end %>
+  </div>
 </div>

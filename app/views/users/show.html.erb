@@ -1,12 +1,5 @@
 <h2>Profile</h2>
-<% if @user.avatar.attached? %>
-  <%= image_tag(@user.avatar,alt:"avatar_user_profile") %>
-<% end %>
 <%= render partial: "profile", locals: {user: @user} %>
-<div>
-  <h3>Tweets</h3>
-  <p>(<%= @user.tweets_count %>)</p>
-</div>
 <div>
   <% @user.tweets.each do |answer| %>
     <%= render partial: "shared/tweet_block", locals: {tweet: answer} %>

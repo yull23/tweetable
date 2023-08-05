@@ -1,0 +1,84 @@
+.tweet-block-link {
+  /* Estilos para el enlace en sí */
+  text-decoration: none;
+  color: inherit;
+}
+
+.tweet-block {
+  /* Estilos para el contenedor del tweet */
+  border: 1px solid rgb(219, 225, 219);
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: 70px auto;
+  grid-template-rows: 70px auto auto;
+  margin: 20px auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 800px;
+}
+
+.tweet-block__avatar {
+  /* Estilos para el contenedor del avatar */
+  grid-row: 1;
+  grid-column: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.tweet-block__tweet-details {
+  /* Estilos para los detalles del tweet */
+  grid-row: 1;
+  grid-column: 2;
+}
+
+.tweet-block__body-user-tweet {
+  /* Estilos para el cuerpo del tweet */
+  grid-column: 1/3;
+  grid-row: 2;
+}
+
+.tweet-block__actions-tweet {
+  /* Estilos para las acciones del tweet */
+  grid-column: 1/3;
+  grid-row: 3;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Estilos para los detalles del usuario */
+.tweet-block__user-details {
+  display: flex;
+}
+
+.tweet-block__user-name {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.tweet-block__user-username {
+  margin-left: 5px;
+  color: pink;
+}
+
+.tweet-block__tweet-update {
+  margin-left: 10px;
+  color: #808080;
+}
+
+/* Estilos para el cuerpo del tweet */
+.tweet-block__body-user-tweet {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Estilos para las acciones del tweet */
+.tweet-block__actions-user {
+  display: flex;
+}
+
+.tweet-block__actions-self-user {
+  display: flex;
+}

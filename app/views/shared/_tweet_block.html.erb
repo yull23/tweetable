@@ -1,50 +1,43 @@
-<%#= link_to tweet_path(tweet), class: "tweet-block" do %>
+<%= link_to tweet_path(tweet), class: "tweet-block-link" do %>
   <div class="tweet-block">
-    <div class="avatar">
-      <% if tweet.user.avatar.attached? %>
-        <%= image_tag(tweet.user.avatar,alt:"avatar_user", class: "avatar-image")%>
-      <% end %>
+    <div class="tweet-block__avatar">
+      <%= image_tag(tweet.user.avatar, alt: "avatar_user", class: "tweet-block__avatar-image") %>
     </div>
-    <div class="tweet-details">
-      <div class="user_details">
-        <span class="user-name"><%= tweet.user.name %>
-        </span>
-        <span class="user-username"><%= "@"+tweet.user.username %>
-        </span>
+    <div class="tweet-block__tweet-details">
+      <div class="tweet-block__user-details">
+        <span class="tweet-block__user-name"><%= tweet.user.name %></span>
+        <span class="tweet-block__user-username"><%= "@" + tweet.user.username %></span>
       </div>
-      <span class="tweet-update"><%= time_ago_in_words("#{tweet.update_tweet}")+" ago" %>
-      </span>
+      <span class="tweet-block__tweet-update"><%= time_ago_in_words("#{tweet.update_tweet}") + " ago" %></span>
     </div>
-    <div class="body-user-tweet">
-      <p><%= tweet.body %>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quia molestiae minus corporis odio, illum fugiat animi nihil natus praesentium est amet unde officiis velit similique quam sunt! Numquam, eaque!.Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quia molestiae minus corporis odio, illum fugiat animi nihil natus praesentium est amet unde officiis velit similique quam sunt! Numquam, eaque!
+    <div class="tweet-block__body-user-tweet">
+      <p>
+        <%= tweet.body %>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quia molestiae minus corporis odio, illum
+        fugiat animi nihil natus praesentium est amet unde officiis velit similique quam sunt! Numquam, eaque!.Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Adipisci quia molestiae minus corporis odio, illum fugiat
+        animi nihil natus praesentium est amet unde officiis velit similique quam sunt! Numquam, eaque!
       </p>
     </div>
-    <div class="actions-tweet">
-      <div class="actions-self-user">
-        <div class="tweets">  <i class="material-symbols-outlined">
-            edit_note
-          </i>
+    <div class="tweet-block__actions-tweet">
+      <div class="tweet-block__actions-self-user">
+        <div class="tweet-block__tweets">
+          <i class="material-symbols-outlined">edit_note</i>
         </div>
-        <div class="likes">  <i class="material-symbols-outlined">
-            delete
-          </i>
+        <div class="tweet-block__likes">
+          <i class="material-symbols-outlined">delete</i>
         </div>
       </div>
-      <div class="actions-user">
-        <div class="tweets">  <i class="material-symbols-outlined">
-            chat
-          </i>
+      <div class="tweet-block__actions-user">
+        <div class="tweet-block__tweets">
+          <i class="material-symbols-outlined">chat</i>
         </div>
-        <div class="tweets"><%= tweet.replies_count %>
+        <div class="tweet-block__tweets"><%= tweet.replies_count %></div>
+        <div class="tweet-block__likes">
+          <i class="material-symbols-outlined">favorite</i>
         </div>
-        <div class="likes">  <i class="material-symbols-outlined">
-            favorite
-          </i>
-        </div>
-        <div class="likes"><%= tweet.likes_count %>
-        </div>
+        <div class="tweet-block__likes"><%= tweet.likes_count %></div>
       </div>
     </div>
   </div>
-  <%# end %>
+<% end %>
