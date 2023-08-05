@@ -70,7 +70,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_04_102414) do
     t.string "email"
     t.string "username"
     t.string "name"
-    t.string "password"
+    t.string "password_digest"
     t.integer "role", default: 0
     t.integer "tweets_count", default: 0
     t.integer "likes_count", default: 0

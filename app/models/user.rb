@@ -9,7 +9,7 @@ class User < ApplicationRecord
   }
   # Validations
   validates :email, presence: true, uniqueness: true, format: { with: URI::MailTo::EMAIL_REGEXP }
-  validates :password, presence: true, length: { minimum: 6 }, format: { without: /\s/ }
+  validates :password_digest, presence: true, length: { minimum: 6 }, format: { without: /\s/ }
   validates :username, presence: true, uniqueness: true,
                        length: { minimum: 3, maximum: 16 },
                        format: { without: /\s/ }
@@ -18,4 +18,7 @@ class User < ApplicationRecord
 
   # # Actives Storage
   has_one_attached :avatar
+
+  # Authentication
+  has_secure_password
 end

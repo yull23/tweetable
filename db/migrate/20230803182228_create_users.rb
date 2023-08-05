@@ -4,7 +4,7 @@ class CreateUsers < ActiveRecord::Migration[7.0]
       t.string :email
       t.string :username
       t.string :name
-      t.string :password
+      t.string :password_digest
       t.integer :role, default: 0
       t.integer :tweets_count, default: 0
       t.integer :likes_count, default: 0

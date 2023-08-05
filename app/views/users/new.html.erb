@@ -1,2 +1,22 @@
 <h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<%= form_with model:@user do |form|%>
+  <%= @user.errors.full_messages do |error| %>
+    <%= error %>
+  <% end %>
+  <div><%= form.label :name, "Name" %>
+    <%= form.text_field :name %>
+  </div>
+  <div><%= form.label :email, "Email" %>
+    <%= form.text_field :email %>
+    <div><%= form.label :username, "Username" %>
+      <%= form.text_field :username %>
+    </div>
+    <div><%= form.label :password_digest, "Password" %>
+      <%= form.password_field :password_digest %>
+    </div>
+    <div><%= form.label :password_confirmation, "Password Confirmation" %>
+      <%= form.password_field :password_confirmation %>
+    </div>
+    <%= form.submit %>
+  </div>
+<% end %>

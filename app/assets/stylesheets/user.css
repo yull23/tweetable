@@ -1,6 +1,6 @@
 .profile-block {
   display: grid;
-  grid-template-rows: repeat(5, auto);
+  grid-template-rows: repeat(6, auto);
   margin: 10px auto;
   padding: 20px;
 
@@ -61,4 +61,12 @@
 
 .activity_user-link-deactivated {
   color: #ab9c9c;
+}
+
+/* button */
+
+.button {
+  border: 1px solid black;
+  border-radius: 5%;
+  display: flex;
 }
