@@ -33,13 +33,13 @@ class Tweet < ApplicationRecord
   end
 
   def set_upload_date
-    self.upload_date ||= Date.current if new_record? || upload_date.blank?
+    self.upload_date ||= Time.current if new_record? || upload_date.blank?
     self.update_tweet = self.upload_date
   end
 
   def set_update_tweet
     return unless saved_change_to_body?
 
-    self.update_tweet = Date.current
+    self.update_tweet = Time.current
   end
 end

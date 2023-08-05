@@ -1,11 +1,50 @@
-<div>
-  <%#= link_to tweet_path(tweet) do%>
-    <p><strong>User:</strong><%= tweet.user.name %></p>
-    <p><strong>Username:</strong>@<%= tweet.user.username %></p>
-    <p><strong>Body:</strong><%= tweet.body %></p>
-    <p><strong>Upload:</strong><%= tweet.upload_date %></p>
-    <p><strong>Update:</strong><%= tweet.update_tweet %></p>
-    <p><strong>Likes:</strong><%= tweet.likes_count %></p>
-    <p><strong>Tweets:</strong><%= tweet.replies_count %></p>
-    <%# end %>
+<%#= link_to tweet_path(tweet), class: "tweet-block" do %>
+  <div class="tweet-block">
+    <div class="avatar">
+      <% if tweet.user.avatar.attached? %>
+        <%= image_tag(tweet.user.avatar,alt:"avatar_user", class: "avatar-image")%>
+      <% end %>
+    </div>
+    <div class="tweet-details">
+      <div class="user_details">
+        <span class="user-name"><%= tweet.user.name %>
+        </span>
+        <span class="user-username"><%= "@"+tweet.user.username %>
+        </span>
+      </div>
+      <span class="tweet-update"><%= time_ago_in_words("#{tweet.update_tweet}")+" ago" %>
+      </span>
+    </div>
+    <div class="body-user-tweet">
+      <p><%= tweet.body %>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quia molestiae minus corporis odio, illum fugiat animi nihil natus praesentium est amet unde officiis velit similique quam sunt! Numquam, eaque!.Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quia molestiae minus corporis odio, illum fugiat animi nihil natus praesentium est amet unde officiis velit similique quam sunt! Numquam, eaque!
+      </p>
+    </div>
+    <div class="actions-tweet">
+      <div class="actions-self-user">
+        <div class="tweets">  <i class="material-symbols-outlined">
+            edit_note
+          </i>
+        </div>
+        <div class="likes">  <i class="material-symbols-outlined">
+            delete
+          </i>
+        </div>
+      </div>
+      <div class="actions-user">
+        <div class="tweets">  <i class="material-symbols-outlined">
+            chat
+          </i>
+        </div>
+        <div class="tweets"><%= tweet.replies_count %>
+        </div>
+        <div class="likes">  <i class="material-symbols-outlined">
+            favorite
+          </i>
+        </div>
+        <div class="likes"><%= tweet.likes_count %>
+        </div>
+      </div>
+    </div>
   </div>
+  <%# end %>

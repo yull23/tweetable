@@ -16,5 +16,6 @@ class User < ApplicationRecord
 
   validates :name, presence: true
 
-  # Personalized Validations
+  # # Actives Storage
+  has_one_attached :avatar
 end
