@@ -1,6 +1,4 @@
 <%= form_with model: user  do |form| %>
-  <%# Aquí se muestran los mensajes de error para el formulario %>
-  <%# Form fields and their input %>
   <% input_labels=[[1,"username","example"],[1,"email","example@mail.com"],[1,"name","Example Name"],[2,"password","*"*8],[2,"password_confirmation","*"*8]] %>
   <div class="user-form__container">
     <% input_labels.each do |input_label| %>
@@ -22,7 +20,6 @@
     <% end %>
     <%= form.label :avatar, "Avatar", class: "user-form__label block" %>
     <%= form.file_field :avatar, class: "user-form__atached", accept: "image/png, image/jpeg" %>
-    <%# ###  %>
     <%= form.submit status_button, class:"button-account button-pink flex jc-c"%>
   </div>
 <% end %>

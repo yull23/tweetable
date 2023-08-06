@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "sessions/create"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
@@ -6,4 +7,7 @@ Rails.application.routes.draw do
   resources :tweets
   resources :users
   get "/users/:id/likes", to: "users#show_likes", as: :show_user_likes
+
+  get "/login", to: "sessions#new", as: :login_path
+  post "/login", to: "sessions#create"
 end

@@ -15,13 +15,14 @@
   padding: 20px;
   width: 80%;
   max-width: 800px;
+  background-color: white;
 }
 
 .tweet-block__avatar {
   /* Estilos para el contenedor del avatar */
+  display: flex;
   grid-row: 1;
   grid-column: 1;
-  display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;

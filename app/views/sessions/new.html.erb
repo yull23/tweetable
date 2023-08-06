@@ -1,0 +1,19 @@
+<h2 class="form-title ">Sign in to your account</h2>
+<div class="user-form">
+  <div class="user-form__container">
+    <span class="container-simple block full_center _0">CONTINUE</span>
+    <%= link_to 'GitHub', "/", class: "button-account button-black flex jc-c" %>
+    <span class="container-simple block full_center _0">OR</span>
+  </div>
+  <%= form_with url:"/login",method: :post, class:"user-form__container", data:{turbo:false}   do |form| %>
+    <%= form.label :email, "email", class: "user-form__label block" %>
+    <%= form.text_field :email, class: "user-form__input block", placeholder: "example@mail.com"%>
+    <%= form.label :password, "password", class: "user-form__label block" %>
+    <%= form.password_field :password, class: "user-form__input block", placeholder: "*"*8%>
+    <%= form.submit "sign up", class:"button-account button-pink flex jc-c"%>
+    <span class="container-simple block full_center _0">Don´t have an account?</span>
+    <%= link_to 'Create an acount', new_user_path ,class:"link-simple full_center _0" %>
+  <% end %>
+  <%= flash[:message]
+ %>
+</div>

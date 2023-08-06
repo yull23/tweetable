@@ -1,0 +1,11 @@
+.form-title {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.link-simple {
+  text-decoration: none;
+  color: rgb(244, 90, 159);
+}
