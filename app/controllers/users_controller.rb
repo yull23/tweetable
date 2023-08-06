@@ -9,7 +9,9 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-  def edit; end
+  def edit
+    @user = User.find_by(id: params[:id])
+  end
 
   def create
     @user = User.new(user_params)
@@ -21,7 +23,20 @@ class UsersController < ApplicationController
     end
   end
 
-  def update; end
+  def update
+    @user = User.find_by(id: params[:id])
+    if @user.authenticate(user_params[:password]).present? && user_params[:password] == user_params[:password_confirmation]
+      @user.update(
+        name: user_params[:name],
+        username: user_params[:username],
+        email: user_params[:email],
+        password: user_params[:new_password]
+      )
+      redirect_to user_path(@user)
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
 
   def destroy; end
 
@@ -32,6 +47,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:username, :email, :name, :password_digest, :password_confirmation)
+    params.require(:user).permit(:username, :email, :name, :password, :password_confirmation,
+                                 :avatar, :new_password)
   end
 end

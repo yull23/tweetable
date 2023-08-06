@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  # Authentication
+  has_secure_password
   # Associations between models
   has_many :likes, dependent: :destroy
   has_many :tweets, dependent: :destroy
@@ -18,7 +20,4 @@ class User < ApplicationRecord
 
   # # Actives Storage
   has_one_attached :avatar
-
-  # Authentication
-  has_secure_password
 end

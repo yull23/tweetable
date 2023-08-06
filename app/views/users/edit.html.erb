@@ -1,2 +1,4 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<h2 class="form-title full_center _0">Edit Profile</h2>
+<div class="user-form">
+  <%= render partial: "form", locals: {user: @user,status_button: "update"} %>
+</div>

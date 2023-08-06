@@ -27,6 +27,7 @@
 .profile-block__avatar-image {
   /* Estilos para el contenedor del avatar */
   width: 150px;
+  height: 150px;
 
   display: flex;
   justify-content: center;
@@ -66,7 +67,14 @@
 /* button */
 
 .button {
-  border: 1px solid black;
-  border-radius: 5%;
+  width: fit-content;
+  background-color: rgb(233, 102, 158);
+  border-radius: 5px;
   display: flex;
+  justify-content: center;
+  margin: 5px auto;
+  padding: 5px 15px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
 }

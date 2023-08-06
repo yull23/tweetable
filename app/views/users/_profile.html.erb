@@ -7,15 +7,15 @@
   <p class="content_tipic">Joined on <%= user.created_at.strftime('%B %e, %Y')
  %>
   </p>
+  <%= link_to edit_user_path(user), class: "button" do %>
+    Edit Profile
+  <% end %>
   <% if  current_page?(user_path)%>
     <% name_class_like="activity_user-link activity_user-link-deactivated" %>
     <% name_class_tweet="activity_user-link activity_user-link-active" %>
   <% elsif  current_page?(show_user_likes_path(user)) %>
     <% name_class_like="activity_user-link activity_user-link-active" %>
     <% name_class_tweet="activity_user-link activity_user-link-deactivated" %>
-  <% end %>
-  <%= link_to edit_user_path(user), class: "button" do %>
-    Edit Profile
   <% end %>
   <div class="activity_user">
     <%= link_to user_path, class: name_class_tweet do%>

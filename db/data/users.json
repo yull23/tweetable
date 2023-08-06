@@ -3,7 +3,7 @@
     "username": "john_doe",
     "name": "John Doe",
     "email": "john.doe@example.com",
-    "password_digest": "password123",
+    "password": "password123",
     "upload_date": "2023-06-15",
     "role": "member"
   },
@@ -11,7 +11,7 @@
     "username": "jane_smith",
     "name": "Jane Smith",
     "email": "jane.smith@example.com",
-    "password_digest": "securepass",
+    "password": "securepass",
     "upload_date": "2023-06-02",
     "role": "member"
   },
@@ -19,7 +19,7 @@
     "username": "admin_user",
     "name": "Admin User",
     "email": "admin@example.com",
-    "password_digest": "admin123",
+    "password": "admin123",
     "upload_date": "2023-06-20",
     "role": "admin"
   },
@@ -27,7 +27,7 @@
     "username": "user123",
     "name": "User 123",
     "email": "user123@example.com",
-    "password_digest": "userpass",
+    "password": "userpass",
     "upload_date": "2023-06-10",
     "role": "member"
   },
@@ -35,7 +35,7 @@
     "username": "test_user",
     "name": "Test User",
     "email": "test.user@example.com",
-    "password_digest": "testpass",
+    "password": "testpass",
     "upload_date": "2023-06-08",
     "role": "member"
   },
@@ -43,7 +43,7 @@
     "username": "susan_smith",
     "name": "Susan Smith",
     "email": "susan.smith@example.com",
-    "password_digest": "mypassword",
+    "password": "mypassword",
     "upload_date": "2023-06-25",
     "role": "member"
   },
@@ -51,7 +51,7 @@
     "username": "mike_johnson",
     "name": "Mike Johnson",
     "email": "mike.johnson@example.com",
-    "password_digest": "mypass123",
+    "password": "mypass123",
     "upload_date": "2023-06-18",
     "role": "member"
   },
@@ -59,7 +59,7 @@
     "username": "alice_wonderland",
     "name": "Alice Wonderland",
     "email": "alice@example.com",
-    "password_digest": "alicepass",
+    "password": "alicepass",
     "upload_date": "2023-06-05",
     "role": "member"
   },
@@ -67,7 +67,7 @@
     "username": "super_admin",
     "name": "Super Admin",
     "email": "superadmin@example.com",
-    "password_digest": "superpass",
+    "password": "superpass",
     "upload_date": "2023-06-30",
     "role": "admin"
   },
@@ -75,7 +75,7 @@
     "username": "demo_user",
     "name": "Demo User",
     "email": "demo.user@example.com",
-    "password_digest": "demopass",
+    "password": "demopass",
     "upload_date": "2023-06-12",
     "role": "member"
   }

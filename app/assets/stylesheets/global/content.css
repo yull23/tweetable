@@ -1,0 +1,36 @@
+/* border iniciales */
+._0 {
+  /* border: 1px solid rgb(182, 49, 49); */
+  margin: 5px;
+  padding: 5px;
+}
+
+/* Bloques */
+
+.block {
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+/* Alineaciones  */
+.full_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.jc-c {
+  justify-content: center;
+}
+.ai-c {
+  align-items: center;
+}
+
+/* Estilos de texto */

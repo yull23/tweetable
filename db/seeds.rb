@@ -80,9 +80,6 @@ end
 
 
 
-
-
-
 # # # Creating users
 # # 5.times do
 # #   User.create

@@ -1,0 +1,28 @@
+<%= form_with model: user  do |form| %>
+  <%# Aquí se muestran los mensajes de error para el formulario %>
+  <%# Form fields and their input %>
+  <% input_labels=[[1,"username","example"],[1,"email","example@mail.com"],[1,"name","Example Name"],[2,"password","*"*8],[2,"password_confirmation","*"*8]] %>
+  <div class="user-form__container">
+    <% input_labels.each do |input_label| %>
+      <%= form.label input_label[1].to_sym, input_label[1].capitalize, class: "user-form__label block" %>
+      <% if input_label[0]==1 %>
+        <%= form.text_field input_label[1].to_sym, class: "user-form__input block", placeholder: input_label[2] %>
+      <% else %>
+        <%= form.password_field input_label[1].to_sym, class: "user-form__input block", placeholder: input_label[2] %>
+      <% end %>
+      <% if user.errors.messages[input_label[1].to_sym].any? %>
+        <span class="user-form__error-messages block">
+          <%= user.errors.messages[input_label[1].to_sym].join(", ")%>
+        </span>
+      <% end %>
+    <% end %>
+    <% if  !current_page?(new_user_path)%>
+      <%= form.label :new_password, "New Password", class: "user-form__label block" %>
+      <%= form.password_field :new_password, class: "user-form__input block" %>
+    <% end %>
+    <%= form.label :avatar, "Avatar", class: "user-form__label block" %>
+    <%= form.file_field :avatar, class: "user-form__atached", accept: "image/png, image/jpeg" %>
+    <%# ###  %>
+    <%= form.submit status_button, class:"button-account button-pink flex jc-c"%>
+  </div>
+<% end %>
